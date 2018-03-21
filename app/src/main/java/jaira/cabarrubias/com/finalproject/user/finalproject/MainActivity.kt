@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.doAsync
+import org.json.JSONObject
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,5 +20,23 @@ class MainActivity : AppCompatActivity() {
 
         progressBar.visibility = GONE
 
+
+        fetchAlbum()
+
     }
+
+    private fun fetchAlbum() {
+        doAsync {
+            val tempName = etAlbum.text.toString()
+            val resultJson = URL(url +tempName).readText()
+            val jsonObject = JSONObject(resultJson)
+            val alsongName = jsonObject.getString("songName")
+            val alSinger = jsonObject.getString("singer")
+            val alYear = jsonObject.getString("year")
+            val alGenre = jsonObject.getString("genre")
+            val bandname = jsonObject.getString("bandName")
+            val pokemonSprites = jsonObject.getJSONObject("sprites").getString("front_default")
+
+        }
     }
+}
