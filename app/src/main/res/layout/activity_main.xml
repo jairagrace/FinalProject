@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.v7.widget.RecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,34 +7,7 @@
     android:layout_height="match_parent"
     tools:context="jaira.cabarrubias.com.finalproject.user.finalproject.MainActivity">
 
-    <TextView
-        android:id="@+id/tvAlbum"
-        android:layout_width="wrap_content"
-        android:layout_height="14dp"
-        android:text="Search an Album"
-        android:textColor="#FF1493"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="28dp" />
-
-    <EditText
-        android:id="@+id/SearchAlbum"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginBottom="41dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvNoAlbum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tvNoAlbum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="There's no album present in this moment."
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="133dp" />
 
 
-</android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.RecyclerView>
