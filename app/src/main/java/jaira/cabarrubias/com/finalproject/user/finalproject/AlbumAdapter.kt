@@ -19,11 +19,13 @@ class AlbumAdapter(private val album: ArrayList<Album>) : RecyclerView.Adapter<A
 
     override fun onBindViewHolder(holder: CustomVIewHolder?, position: Int) {
         val albumdetail : Album = album[position]
-       /* holder?.pokemonName?.text = albumdetail.songName
-        holder?.pokemonName?.text = albumdetail.songName
-        val pokemonImage = holder?.pokemonImage
-        Picasso.with(holder?.view?.context).load(albumdetail.sprites.frontDefault).into(pokemonImage)
-*/
+        holder?.AlbumName?.text = albumdetail.songName
+        holder?.AlbumArtist?.text = albumdetail.songName
+        val AlbumImg = holder?.ImgAlbum
+
+
+        Picasso.with(holder?.view?.context).load(albumdetail.sprites.frontDefault).into(AlbumImg)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): CustomVIewHolder {
@@ -33,8 +35,10 @@ class AlbumAdapter(private val album: ArrayList<Album>) : RecyclerView.Adapter<A
 
 
     class CustomVIewHolder(var view: View) : RecyclerView.ViewHolder(view){
-       /* val pokemonName = view.findViewById<TextView>(R.id.)
-        val pokemonImage = view.findViewById<ImageView>(R.id.pokemonImg)*/
+        val AlbumName = view.findViewById<TextView>(R.id.txtAlbumName)
+        val AlbumArtist = view.findViewById<TextView>(R.id.txtAlbumArtist)
+        val ImgAlbum = view.findViewById<ImageView>(R.id.imgAlbum)
+
 
     }
 }
