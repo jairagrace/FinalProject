@@ -52,10 +52,8 @@ class MainActivity : AppCompatActivity() {
                 ))
 
 
-                Picasso.with(this@MainActivity).load(albumSprites).into(imgAlbum)
+              
 
-                progressBar.visibility = View.GONE
-                tvMessage.visibility = View.VISIBLE
 
 
             }
